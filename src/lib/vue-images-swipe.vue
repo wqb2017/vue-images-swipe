@@ -114,16 +114,16 @@ export default {
     _setTimeOutSwipe() {
       //先清除定时器
       clearTimeout(this.oTimer);
-      this._callbackFn();
+      this._callbackFn(this.selected);
       this.oTimer = setTimeout(() => {
-        this._swipe();
+        this._goSwipe();
       }, this.slideTime);
     },
     //轮播
     _swipe() {
       let _itemElement = document.querySelectorAll(`#${this.newID} .vueImagesSwipe__index-item`);//获取所有图片元素
       this.itemElementLen = _itemElement.length;//获取所有图片个数
-      this._goSwipe();
+      this.selected = 0;
       this._setTimeOutSwipe();
     },
     //向前切换
@@ -134,6 +134,7 @@ export default {
       } else {
         this.selected = 0;
       }
+      this._setTimeOutSwipe();
     },
     //向后切换
     _backSwipe() {

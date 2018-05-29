@@ -20,7 +20,7 @@ export default {
   methods: {
     //切换回调
     _toggleCallback() {
-      console.log(1, new Date());
+      // console.log(1, new Date());
     }
   }
 }
