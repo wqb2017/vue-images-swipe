@@ -1,0 +1,86 @@
+@mixin lfBox {
+  .vueImagesSwipe__key-item {
+    float: left;
+  }
+}
+@mixin clearfix {
+  zoom: 1;
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '.';
+    line-height: 0;
+  }
+}
+@mixin x_align {
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin y_align {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vueImagesSwipe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__index {
+    width: 100%;
+    height: 100%;
+    &-item {
+      display: none;
+      width: 100%;
+      height: 100%;
+      &.is-active {
+        display: block;
+      }
+      &-img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__key {
+    position: absolute;
+
+    @include clearfix();
+    &.right {
+      right: 50px;
+
+      @include y_align();
+    }
+    &.left {
+      left: 50px;
+
+      @include y_align();
+    }
+    &.top {
+      top: 50px;
+
+      @include x_align();
+      @include lfBox();
+    }
+    &.bottom {
+      bottom: 50px;
+
+      @include x_align();
+      @include lfBox();
+    }
+    &-item {
+      margin-bottom: 8px;
+      padding: 5px 12px;
+      border-radius: 50%;
+      color: #333;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      &.is-active {
+        background: #ccc;
+      }
+    }
+  }
+}
