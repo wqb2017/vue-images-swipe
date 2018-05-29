@@ -33,7 +33,7 @@ Vue.use(VueImagesSwipe);
 * @param {Boolean} isShowTimer 是否显示定时器，默认显示
 * @param {String} id 容器 ID
 * @param {String} position 轮播-定位，默认有定位右侧
-* @param {Boolean} isKeyboardEvents 是否支持键盘事件，默认支持
+* @param {Boolean} isKeyboardEvents 是否支持键盘事件，默认不支持
 * @param {Object} keyStyle key 样式
 * @param {Object} keyStyle key 样式
 * @param {Object} keyStyleActive key 选中样式

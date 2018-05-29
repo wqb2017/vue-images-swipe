@@ -48,11 +48,11 @@ export default {
         return 'right';
       }
     },
-    //是否支持键盘事件，默认支持
+    //是否支持键盘事件，默认不支持
     isKeyboardEvents: {
       type: Boolean,
       default() {
-        return true;
+        return false;
       }
     },
     //key样式
@@ -107,8 +107,8 @@ export default {
   },
   methods: {
     //切换回调函数
-    _callbackFn() {
-      this.$emit('toggleCallback');
+    _callbackFn(index) {
+      this.$emit('toggleCallback', index);
     },
     //选中后，经过设定时间再轮播
     _setTimeOutSwipe() {

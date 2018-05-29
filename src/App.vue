@@ -19,8 +19,8 @@ export default {
   },
   methods: {
     //切换回调
-    _toggleCallback() {
-      // console.log(1, new Date());
+    _toggleCallback(index) {
+      console.log(index);
     }
   }
 }
