@@ -2,11 +2,13 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/lib/index.js',
+  entry: {
+    'vue-images-swipe': './src/lib/index.js',
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-images-swipe.js',
+    filename: '[name].js',
     library: 'VueImagesSwipe',
     libraryTarget: 'umd',
     umdNamedDefine: true,

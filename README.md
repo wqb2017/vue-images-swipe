@@ -10,7 +10,7 @@
 
 1. install vue-images-swipe
 
-   npm install vue-images-swipe
+   npm install vue-images-swipe --save
 
 2. main.js import
 
@@ -19,7 +19,7 @@ import VueImagesSwipe from 'vue-images-swipe';
 Vue.use(VueImagesSwipe);
 ```
 
-3. example
+## example
 
 ```html
  <VueImagesSwipe :listData="imgList" :slideTime="2000" position="right" :keyStyleActive="{'font-size':'20px'}" @toggleCallback="_toggleCallback"></VueImagesSwipe>

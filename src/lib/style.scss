@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
 @mixin lfBox {
   .vueImagesSwipe__key-item {
     float: left;
@@ -44,7 +51,7 @@
     }
   }
   &__key {
-    position: absolute;
+    position: fixed;
 
     @include clearfix();
     &.right {

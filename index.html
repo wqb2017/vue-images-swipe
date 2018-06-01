@@ -4,11 +4,52 @@
 <head>
   <meta charset="utf-8">
   <title>vue-images-swipe</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <vue-images-swipe :list-data="imgList" :slide-time="3000" :key-style-active="{'font-size':'20px','background':'#f00'}"></vue-images-swipe>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="/dist/vue-images-swipe.js"></script>
 </body>
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        imgList: [
+          {
+            name: '图片1',
+            id: 1000,
+            src: './src/imgs/1.jpeg',
+          },
+          {
+            name: '图片2',
+            id: 2000,
+            src: './src/imgs/2.jpg',
+          },
+          {
+            name: '图片3',
+            id: 3000,
+            src: './src/imgs/3.jpg',
+          },
+          {
+            name: '图片4',
+            id: 4000,
+            src: './src/imgs/4.jpg',
+          },
+        ],
+      }
+    }
+  });
+</script>
 
 </html>

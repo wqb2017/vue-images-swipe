@@ -2,7 +2,7 @@
   "name": "vue-images-swipe",
   "main": "dist/vue-images-swipe.js",
   "description": "图片切换，支持键盘事件",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "wqb2017",
   "license": "MIT",
   "private": false,
